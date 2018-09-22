@@ -66,10 +66,12 @@ public class NotiManager {
     public static void sendNotification(Context context, int id, @Channel String channel, String title, String body) {
 
         int icon = android.R.drawable.stat_notify_chat;
-        Intent intent1 = new Intent("com.project.tki.myalarmmanager.TEST");
-        intent1.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        Intent intent1 = new Intent("secondActi");
+//        Intent intent1 = new Intent("mainalarmmanager");
+//        Intent intent1 = new Intent(context,MainActivity.class);
+        intent1.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
 
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(
+        PendingIntent pendingIntent = PendingIntent.getActivity(
                 context,
                 1234,
                 intent1,
