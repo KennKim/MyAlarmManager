@@ -3,6 +3,7 @@
     package="com.project.tki.myalarmmanager">
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AdmobTest"></activity>
+        <activity android:name=".admob.AdmobTest"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -32,7 +33,7 @@
         <receiver
             android:name=".AlarmReceiver"
             android:enabled="true"
-            android:exported="true"></receiver>
+            android:exported="true"/>
 
         <activity android:name=".Calendar2proliActivity">
             <intent-filter>

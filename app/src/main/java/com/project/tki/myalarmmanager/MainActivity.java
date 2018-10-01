@@ -25,6 +25,7 @@ import android.widget.PopupWindow;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.project.tki.myalarmmanager.admob.AdmobTest;
 import com.project.tki.myalarmmanager.databinding.ActivityMainBinding;
 
 import java.util.Calendar;
@@ -34,7 +35,7 @@ import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
     private static final String INTENT_ALARM = "com.project.tki.myalarmmanager.ALARM_START";
-    private static final String TAG = "ttttttest";
+    public static final String TAG = "ttttttest";
     private static final int REQUEST_CODE = 1234;
 
     private ActivityMainBinding b;
@@ -407,22 +408,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickMaterialCalendar(View v) {
-
-        startActivity(new Intent(MainActivity.this,Calendar2proliActivity.class));
-
+        startActivity(new Intent(MainActivity.this, Calendar2proliActivity.class));
     }
 
 
     public void onClickAdmob(View v) {
-
-        startActivity(new Intent(MainActivity.this,Calendar2proliActivity.class));
-
+        startActivity(new Intent(MainActivity.this, AdmobTest.class));
     }
 
 
     @Override
     protected void onDestroy() {
-        mTimer.cancel();
+        if (mTimer != null) {
+            mTimer.cancel();
+        }
         super.onDestroy();
     }
 }
