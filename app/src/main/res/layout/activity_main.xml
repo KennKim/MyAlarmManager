@@ -17,6 +17,16 @@
         android:background="#d9d9d9"
         tools:context="com.project.tki.myalarmmanager.MainActivity">
 
+        <Button
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="@{activity::onClickAdmob}"
+            android:layout_margin="20dp"
+            android:backgroundTint="#13FDEA"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="go Admob"
+            android:layout_height="wrap_content" />
+
 
         <TextView
             android:id="@+id/tv"
@@ -35,73 +45,73 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tv1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#f4fbff"
-                android:padding="5dp"
-                android:text="Service Test : Music Play"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
-                android:id="@+id/line1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/white"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal"
-                android:translationZ="5dp"
-                app:layout_constraintTop_toBottomOf="@+id/tv1">
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/btn_play"
-                    style="@style/MyBtn"
-                    android:layout_margin="20dp"
-                    android:onClick="@{activity::onClick}"
-                    android:text="play" />
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    style="@style/Card"
+                    android:layout_height="wrap_content">
 
-                <Button
-                    android:id="@+id/btn_stop"
-                    style="@style/MyBtn"
-                    android:layout_margin="20dp"
-                    android:onClick="@{activity::onClick}"
-                    android:text="stop" />
-            </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:background="#f4fbff"
-                android:padding="5dp"
-                android:text="AlarmManager Test"
-                app:layout_constraintTop_toBottomOf="@+id/line1" />
+                        <TextView
+                            android:id="@+id/tv1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Service Test : Music Play"  />
 
-            <LinearLayout
-                android:id="@+id/line2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/white"
-                android:gravity="start|center_vertical"
-                android:orientation="vertical"
-                android:translationZ="5dp"
-                app:layout_constraintTop_toBottomOf="@+id/tv2">
+                        <LinearLayout
+                            android:id="@+id/line1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal"
+                            android:translationZ="5dp" >
+
+                            <Button
+                                android:id="@+id/btn_play"
+                                style="@style/MyBtn"
+                                android:onClick="@{activity::onClick}"
+                                android:text="play" />
+
+                            <Button
+                                android:id="@+id/btn_stop"
+                                style="@style/MyBtn"
+                                android:onClick="@{activity::onClick}"
+                                android:text="stop" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <TextView
+                    style="@style/MyTitle"
+                    android:text="AlarmManager Test"  />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@android:color/white"
                     android:focusable="true"
                     android:focusableInTouchMode="true"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal"
+                    android:translationZ="5dp">
 
                     <Button
                         android:id="@+id/btn_Alarm"
@@ -120,40 +130,24 @@
 
                     <android.support.v7.widget.SwitchCompat
                         android:id="@+id/sw_alarm"
-                        android:layout_margin="20dp"
-                        style="@style/MySw" />
+                        style="@style/MySw"
+                        android:layout_margin="20dp" />
 
                 </LinearLayout>
-            </LinearLayout>
 
 
-            <TextView
-                android:id="@+id/tv3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:background="#f4fbff"
-                android:padding="5dp"
-                android:text="Timer Test"
-                app:layout_constraintTop_toBottomOf="@+id/line1" />
-
-            <LinearLayout
-                android:id="@+id/line3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/white"
-                android:gravity="start|center_vertical"
-                android:orientation="vertical"
-                android:translationZ="5dp"
-                app:layout_constraintTop_toBottomOf="@+id/tv2">
+                <TextView
+                    style="@style/MyTitle"
+                    android:text="Timer Test" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:background="@android:color/white"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal"
+                    android:translationZ="5dp">
+
 
                     <Button
                         android:id="@+id/btn_timer"
@@ -168,12 +162,82 @@
 
                 </LinearLayout>
 
-            </LinearLayout>
 
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/line2">
+                <TextView
+                    style="@style/MyTitle"
+                    android:text="Date Picker" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal"
+                    android:translationZ="5dp">
+
+
+                    <Button
+                        android:id="@+id/btn_date"
+                        style="@style/MyBtnVertical"
+                        android:onClick="@{activity::onClick}"
+                        android:text="Date" />
+
+
+                    <Button
+                        android:id="@+id/btn_date2"
+                        style="@style/MyBtnVertical"
+                        android:onClick="@{activity::onClick}"
+                        android:text="Date_H" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/btn_time"
+                        style="@style/MyBtnVertical"
+                        android:onClick="@{activity::onClick}"
+                        android:text="Time" />
+
+
+                    <Button
+                        android:id="@+id/btn_time2"
+                        style="@style/MyBtnVertical"
+                        android:onClick="@{activity::onClick}"
+                        android:text="Time_H" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    style="@style/MyTitle"
+                    android:text="Calendar" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal"
+                    android:translationZ="5dp">
+
+                    <Button
+                        android:id="@+id/btn_cal"
+                        style="@style/MyBtn"
+                        android:onClick="@{activity::onClick}"
+                        android:text="Cal" />
+
+                    <Button
+                        android:id="@+id/btn_cal2"
+                        style="@style/MyBtn"
+                        android:onClick="@{activity::onClick}"
+                        android:text="Material_cal" />
+
+                </LinearLayout>
+
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -188,7 +252,7 @@
                         android:text="---- Status List ----" />
 
                 </LinearLayout>
-            </ScrollView>
-        </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
     </android.support.constraint.ConstraintLayout>
 </layout>

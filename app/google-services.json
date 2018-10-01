@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "777679702027",
+    "firebase_url": "https://allmytestapp.firebaseio.com",
+    "project_id": "allmytestapp",
+    "storage_bucket": "allmytestapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777679702027:android:f7f8c9bdbefb0276",
+        "android_client_info": {
+          "package_name": "com.project.tki.myalarmmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777679702027-u44gbjs2uo6v3uqafr7ecnl695skc0il.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.project.tki.myalarmmanager",
+            "certificate_hash": "5ccd251489e953e9495c0866063fd25bc8fa56ff"
+          }
+        },
+        {
+          "client_id": "777679702027-f9t4g12c9t9bpkqqktc5s11jtkda64jq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYqbDedp9iwlHstzL1jzW5HTwkJ1L_-AQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777679702027-f9t4g12c9t9bpkqqktc5s11jtkda64jq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
