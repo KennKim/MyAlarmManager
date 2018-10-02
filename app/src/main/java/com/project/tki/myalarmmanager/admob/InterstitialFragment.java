@@ -13,7 +13,6 @@ import android.widget.Toast;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.MobileAds;
 import com.project.tki.myalarmmanager.R;
 import com.project.tki.myalarmmanager.databinding.FragmentInterstitialBinding;
 
@@ -53,7 +52,7 @@ public class InterstitialFragment extends Fragment {
         b.setFragment(this);
 
         // Initialize the Mobile Ads SDK.
-        MobileAds.initialize(getActivity(), getString(R.string.admob_id));
+//        MobileAds.initialize(getActivity(), getString(R.string.admob_id));
 
         // Create the InterstitialAd and set the adUnitId.
         interstitialAd = new InterstitialAd(getActivity());

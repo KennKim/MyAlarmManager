@@ -36,7 +36,7 @@ public class AdmobTest extends AppCompatActivity implements BannerFragment.OnFra
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new BannerFragment(), "Banner");
         adapter.addFragment(new InterstitialFragment(), "Inter");
-        adapter.addFragment(new RewardedVideoFragment(), "Video");
+        adapter.addFragment(new RewardedVideoFragment(), "Rewarded");
         b.vp.setAdapter(adapter);
 
         b.tab.setupWithViewPager(b.vp);
