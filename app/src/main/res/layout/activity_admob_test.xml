@@ -25,12 +25,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_scrollFlags="scroll|enterAlwaysCollapsed|snap"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                 app:title="sadfdsafasdf" />
 
             <android.support.design.widget.TabLayout
                 android:id="@+id/tab"
                 android:layout_width="match_parent"
+                app:tabSelectedTextColor="@android:color/white"
+                app:tabTextColor="@android:color/black"
                 android:layout_height="wrap_content"
                 app:layout_scrollFlags="scroll|enterAlways|snap">
 

@@ -2,14 +2,19 @@
     <string name="app_name">MyAlarmManager</string>
 
 
-    <string name="admob_id">ca-app-pub-6114700422121627~7152605363</string>
-    <string name="adUnit_id">ca-app-pub-6114700422121627/6666246555</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <!--
+    <!--test id-->
     <string name="admob_id">ca-app-pub-3940256099942544~3347511713</string>
-    <string name="adUnit_id">ca-app-pub-3940256099942544/6300978111</string>
-    -->
+    <string name="adUnit_banner">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="adUnit_inter">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="adUnit_rewarded">ca-app-pub-3940256099942544/5224354917</string>
+
+<!--
+    <string name="admob_id">ca-app-pub-6114700422121627~7152605363</string>
+    <string name="adUnit_banner">ca-app-pub-6114700422121627/6666246555</string>
+    <string name="adUnit_inter">ca-app-pub-6114700422121627/7578915117</string>
+    <string name="adUnit_rewarded">ca-app-pub-6114700422121627/7578915117</string>
+-->
+
+
 
 </resources>
