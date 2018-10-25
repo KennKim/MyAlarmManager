@@ -16,18 +16,17 @@ import java.util.List;
  * Created by Mark O'Sullivan on 25th February 2018.
  */
 
-public class MainListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class SwipeRevealAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private List<String> shoppingList;
+    private List<String> items;
 
-    public MainListAdapter(List<String> shoppingList) {
-        this.shoppingList = shoppingList;
+    public SwipeRevealAdapter(List<String> items) {
+        this.items = items;
     }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.list_item_main, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_main, parent, false);
         return new MainListViewHolder(view);
     }
 
@@ -35,7 +34,7 @@ public class MainListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         MainListViewHolder h = (MainListViewHolder) holder;
 
-        h.mealTV.setText(shoppingList.get(position));
+        h.mealTV.setText(items.get(position));
 
         h.infoButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,7 +53,7 @@ public class MainListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     @Override
     public int getItemCount() {
-        return shoppingList.size();
+        return items.size();
     }
 
     public static class MainListViewHolder extends RecyclerView.ViewHolder {
@@ -67,7 +66,7 @@ public class MainListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             super(itemView);
             mealTV = itemView.findViewById(R.id.meal_tv);
             infoButton = itemView.findViewById(R.id.info_button);
-            editButton= itemView.findViewById(R.id.edit_button);
+            editButton = itemView.findViewById(R.id.edit_button);
         }
     }
 }

@@ -20,7 +20,7 @@ public class SwipeRevealActivity extends AppCompatActivity {
         b = DataBindingUtil.setContentView(this, R.layout.activity_swipe_reveal);
 
 
-        MainListAdapter mainListAdapter = new MainListAdapter(getMealList());
+        SwipeRevealAdapter mainListAdapter = new SwipeRevealAdapter(getMealList());
         b.rv.setAdapter(mainListAdapter);
     }
 

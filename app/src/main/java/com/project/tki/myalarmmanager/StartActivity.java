@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.project.tki.myalarmmanager.databinding.ActivityStartBinding;
+import com.project.tki.myalarmmanager.swipe_layout.SwipeLayoutActivity;
 import com.project.tki.myalarmmanager.swipe_reveal.SwipeRevealActivity;
 
 public class StartActivity extends AppCompatActivity {
@@ -17,17 +18,22 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         b = DataBindingUtil.setContentView(this, R.layout.activity_start);
         b.setActivity(this);
-
     }
 
 
-    public void onClickAlarm(View v){
+    public void onClickAlarm(View v) {
         Intent intent = new Intent(StartActivity.this, MainActivity.class);
         startActivity(intent);
 
     }
-    public void onClickSwipeReveal(View v){
+
+    public void onClickSwipeReveal(View v) {
         Intent intent = new Intent(StartActivity.this, SwipeRevealActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickSwipeLayout(View v) {
+        Intent intent = new Intent(StartActivity.this, SwipeLayoutActivity.class);
         startActivity(intent);
     }
 }

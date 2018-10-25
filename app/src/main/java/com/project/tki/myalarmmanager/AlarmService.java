@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.IBinder;
 
+import com.project.tki.myalarmmanager.NotiManager;
+import com.project.tki.myalarmmanager.R;
+
 public class AlarmService extends Service {
     public static final String ONOFF = "ONOFF";
     private MediaPlayer mediaPlayer;
