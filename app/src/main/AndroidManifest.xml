@@ -12,9 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".admob.AdmobTest"/>
+        <activity android:name=".swipe_reveal.SwipeRevealActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".admob.AdmobTest" />
         <activity
-            android:name=".MainActivity"
+            android:name=".StartActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -33,7 +35,7 @@
         <receiver
             android:name=".AlarmReceiver"
             android:enabled="true"
-            android:exported="true"/>
+            android:exported="true" />
 
         <activity android:name=".Calendar2proliActivity">
             <intent-filter>
