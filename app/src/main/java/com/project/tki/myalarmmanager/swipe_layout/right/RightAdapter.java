@@ -43,6 +43,8 @@ public class RightAdapter extends RecyclerView.Adapter<RightAdapter.ItemHolder> 
                 return new ItemHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.right_layout_item_5, viewGroup, false));
             case 6:
                 return new ItemHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.right_layout_item_6, viewGroup, false));
+            case 7:
+                return new ItemHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.right_layout_item_8_my, viewGroup, false));
             default:
                 return new ItemHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.right_layout_item_7, viewGroup, false));
         }

@@ -1,4 +1,7 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 27
@@ -6,12 +9,25 @@ android {
         applicationId "com.project.tki.myalarmmanager"
         minSdkVersion 21
         targetSdkVersion 27
-        versionCode 3
-        versionName '1.0.2'
+        versionCode 4
+        versionName '1.0.4'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
     buildTypes {
+        /* mytest {
+//            dimension "stage"
+//            minSdkVersion 21
+            aaptOptions.cruncherEnabled = false
+//            resConfigs "en", "xxxhdpi"
+            ext.enableCrashlytics = false
+//            ext.alwaysUpdateBuildId = false
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }*/
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -20,12 +36,14 @@ android {
     dataBinding {
         enabled = true
     }
+
+
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
-
+    kapt "com.android.databinding:compiler:3.1.4"
 
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support:support-v4:27.1.1'
@@ -39,12 +57,14 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:16.0.1'
     implementation 'com.google.firebase:firebase-ads:15.0.1'
 
-
-
     // SwipeLayout
     implementation 'com.github.ArmanSar:SwipeLayout:1.0.8'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
 
 
 }
 apply plugin: 'com.google.gms.google-services'
+repositories {
+    mavenCentral()
+}

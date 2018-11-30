@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<mobile.sarproj.com.swipelayout.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    app:draggedItem="@id/line"
+    app:isFreeDragAfterOpen="true"
+    app:isFreeHorizontalDrag="false"
+    app:leftItem="@id/left_view"
+    app:swipeDirection="right">
+
+    <LinearLayout
+        android:id="@+id/left_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_back_corner2">
+
+        <ImageView
+            android:id="@+id/left_view"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@drawable/shape_back_corner2"
+            android:gravity="center"
+            android:src="@drawable/ic_delete" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="visible"
+        android:background="@drawable/shape_back_corner">
+
+
+
+        <ImageView
+            android:id="@+id/iv_face"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="start|center_vertical"
+            android:layout_margin="3dp"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/ic_info_outline" />
+
+        <TextView
+            android:id="@+id/drag_item"
+            android:layout_width="wrap_content"
+            android:textSize="25sp"
+            android:layout_height="wrap_content"
+            android:text="test" />
+
+    </LinearLayout>
+
+
+</mobile.sarproj.com.swipelayout.SwipeLayout>

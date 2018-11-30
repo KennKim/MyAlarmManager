@@ -25,7 +25,7 @@ public class RightActivity extends AppCompatActivity {
 
     private List<String> getItems() {
         List<String> items = new ArrayList<>();
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 9; i++) {
             items.add("item " + i);
         }
         return items;

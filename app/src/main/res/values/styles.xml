@@ -10,8 +10,7 @@
     </style>
 
 
-
-    <style name="Card" parent="CardView" >
+    <style name="Card" parent="CardView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">5dp</item>
@@ -19,7 +18,7 @@
     </style>
 
 
-    <style name="MyTitle"   >
+    <style name="MyTitle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:padding">5dp</item>
@@ -27,7 +26,7 @@
     </style>
 
 
-    <style name="MyBtn" parent="Widget.AppCompat.Button" >
+    <style name="MyBtn" parent="Widget.AppCompat.Button">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">10dp</item>
@@ -35,7 +34,7 @@
     </style>
 
 
-    <style name="MyBtnVertical" parent="Widget.AppCompat.Button" >
+    <style name="MyBtnVertical" parent="Widget.AppCompat.Button">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">0dp</item>
@@ -43,23 +42,27 @@
     </style>
 
 
-
-
-    <style name="MySw" parent="Widget.AppCompat.CompoundButton.Switch" >
+    <style name="MySw" parent="Widget.AppCompat.CompoundButton.Switch">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:colorControlActivated">@color/colorPrimaryDark</item>
     </style>
 
 
-
-
-
-    <style name="tvAdview" >
+    <style name="tvAdview">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingStart">10dp</item>
         <item name="android:paddingEnd">10dp</item>
     </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

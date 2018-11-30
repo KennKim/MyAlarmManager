@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".swipe_layout.SwipeLayoutActivity"></activity>
+        <activity android:name=".swipe_layout.SwipeLayoutActivity" />
         <activity android:name=".swipe_reveal.SwipeRevealActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".admob.AdmobTest" />
@@ -72,22 +72,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Calendar3applActivity" />
-
-
-
-
-
-        <activity android:name=".swipe_layout.left.LeftActivity"/>
-        <activity android:name=".swipe_layout.right.RightActivity"/>
-        <activity android:name=".swipe_layout.horizontal.HorizontalActivity"/>
-
-
-
-
-
-
-
-
+        <activity android:name=".swipe_layout.left.LeftActivity" />
+        <activity android:name=".swipe_layout.right.RightActivity" />
+        <activity android:name=".swipe_layout.horizontal.HorizontalActivity" />
     </application>
 
 </manifest>
